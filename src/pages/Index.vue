@@ -95,7 +95,7 @@ export default {
       this.translateVal = window.scrollY; 
     }
   },
-  created () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll);
   },
 }
