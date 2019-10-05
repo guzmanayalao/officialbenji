@@ -4,6 +4,7 @@
     <div id="videoModal" :class="{modalIsOpen: openModal}" @click="openModal = false, modalVideoSrc = ''"> 
       <iframe width="560" height="315" :src="modalVideoSrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
     <slot/> 
+
   </div>
 </template>
 <script>
@@ -21,13 +22,7 @@ export default {
   }
 }
 </script>
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
+
 
 <style>
 * {

@@ -10,6 +10,10 @@ export default function(Vue, { router, head, isClient }) {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,800&display=swap'
     })
+    head.meta.push({
+        name: 'title',
+        content: 'BENJIS OFFICIAL WEBSITE'
+    })
     head.bodyAttrs = { class: 'body-class' }
 
 

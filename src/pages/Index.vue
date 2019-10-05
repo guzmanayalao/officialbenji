@@ -97,7 +97,7 @@ export default {
     }
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: "BENJI'S OFFICIAL WEBSITE"
   },
   methods: { 
     handleScroll (event) {
