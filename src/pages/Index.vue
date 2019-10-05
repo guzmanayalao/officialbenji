@@ -30,8 +30,9 @@
           <div class="content">
             <div class="maxWidthWrapper">
               <h2>BENJI</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat ut arcu sit amet sodales. Nullam quis lobortis ex. Nullam dignissim magna nibh, a sollicitudin nisi bibendum a. Phasellus mollis blandit diam et pretium. Aenean aliquam dui eu sodales maximus. Vestibulum tristique leo sed est venenatis venenatis a ac mi. Suspendisse efficitur tristique venenatis.
+              <p style="line-height: 1.8">
+                Benji excercises his imaginative and curious nature to expand the bounds of Chicago hiphop. After falling in love with poetry and rap, the 17 year old from Little Village Chicago decided to drop out of school
+                to focus on his passion. Since then, Benji has made a name for himself with his songs "Menace" and "Monster". Chicago wants more and Benji's ready to give them what they want.
               </p>
               <h2>SHOW DATES</h2>
               <p><span class="showLocation">THE FORGE, JOLIET IL</span>
@@ -43,24 +44,22 @@
 
         </div>
     </section>
-    <section id="showDates">
+    <section id="showDates" style="padding-bottom: 5rem;">
       <div class="maxWidthWrapper">
         <div class="imageContentWrapper">
           <div class="content">
 
             <div >
               <div class="musicAndVideoWrapper">
-                <div>
-                <h2>MUSIC</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat ut arcu sit amet sodales. Nullam quis lobortis ex. Nullam dignissim magna nibh, a sollicitudin nisi bibendum a. Phasellus mollis blandit diam et pretium. Aenean aliquam dui eu sodales maximus. Vestibulum tristique leo sed est venenatis venenatis a ac mi. Suspendisse efficitur tristique venenatis.
-                  </p>
-                </div>
                 <div style="position: relative; width: 100%">
-                  <g-image id="crossHatchMusicPlayer" src="../crossHatch.svg" :style="{transform: 'translateY(' + (-translateVal/6) + 'px)'}"></g-image>
-                  <iframe width="315" height="315" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/294175084&color=%23690000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                  <h2 style="text-align: center; display: block; margin-bottom: 2rem;">MUSIC</h2>
+                  <div class="musicWrapper">
+                    <iframe  src="https://www.youtube.com/embed/RhKZ2EpaeA0?controls=0&autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    <iframe  scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/294175084&color=%23690000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                  </div>
                 </div>
               </div>
+            </div>
                 
 
               </div>
@@ -69,10 +68,20 @@
             
           </div>
 
-        </div>
-      </div>
     </section>
-    
+    <!-- <section id="showDates">
+      <div class="maxWidthWrapper">
+        <div class="imageContentWrapper">
+        <h2>Sign Up</h2>
+        <form action="">
+          <input type="text" placeholder="">
+          <button></button>
+        </form>
+        </div>
+
+      </div>
+
+    </section> -->
 
   
 
@@ -121,12 +130,24 @@ export default {
   align-items: center;
   margin-top: 4rem;
 }
+.musicWrapper {
+  display: flex;
+}
+.musicWrapper iframe:nth-of-type(2) {
+  margin-left: 2rem;
+}
 .musicAndVideoWrapper h2 {
   margin-top: 0;
+  text-align: center;
+  margin: auto;
+  display: block;
+  width: auto;
 }
 iframe {
   margin: auto; 
   display: block;
+  width: 550px;
+  height: 350px;
 }
 .home-links a {
   margin-right: 1rem;
@@ -192,6 +213,7 @@ nav > a:hover:after {
   right: 0;
   left: 0;
   position: absolute; 
+  overflow-x: hidden;
 }
 
 
@@ -207,6 +229,9 @@ section#showDates .imageContentWrapper h2{
   font-family: 'Open Sans', sans-serif;
   display: inline-block;
   margin-bottom: 0;
+
+}
+section#showDates:nth-of-type(2) .imageContentWrapper > h2{ 
 
 }
 .imageContentWrapper {
@@ -278,6 +303,16 @@ section#showDates .content {
   width: 200px;
 }
 @media screen and (max-width: 1200px) {
+  iframe {
+    width: 320px;
+  }
+  .musicWrapper {
+    flex-direction: column;
+  }
+  .musicWrapper iframe:nth-of-type(2) {
+    margin: 2rem auto;
+    
+  }
   .showDescription, .showLocation {
     text-align: center;
     margin: auto;
@@ -330,7 +365,7 @@ section#showDates .imageContentWrapper h2::after {
 }
 
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px){
   #benjiAbout {
     max-width: 300px;
   }
