@@ -88,7 +88,7 @@
             <div class="maxWidthWrapper">
               <h2 style="font-size: 50px; display: block; text-align: center; ">CONTACT</h2>
               <p style="line-height: 1.8">
-                For booking, features, and inquiries please fill out this form. This is the best way to directly contact BENJI.<br><span>{{ successMessage }}</span>
+                For booking, features, and inquiries please fill out this form. This is the best way to directly contact BENJI.<br><span :style="{color: messageColor}">{{ successMessage }}</span>
               </p>
                 <form 
                   name="contact"
@@ -141,6 +141,7 @@ export default {
     return {
       translateVal: 0,
       successMessage: null,
+      messageColor: "#40db80",
       formData: {},
 
 
@@ -168,7 +169,7 @@ export default {
         }),
       })
       .then(() => this.successMessage = 'Thank you for contacting benji!')
-      .catch(error => this.successMessage = error)
+      .catch(error => this.successMessage = error, this.messageColor = "#db4040" )
     }
   },
   mounted () {
@@ -196,7 +197,9 @@ input, textarea {
   border-bottom: 1px solid white;
   color: white; 
   resize: none;
-    transition: all .3s;
+  width: 50%;
+  margin-bottom: 2rem; 
+  transition: all .3s;
 
 }
 input:focus, textarea:focus {
