@@ -15,6 +15,6 @@ export default function(Vue, { router, head, isClient }) {
         content: 'BENJIS OFFICIAL WEBSITE'
     })
     head.bodyAttrs = { class: 'body-class' }
-
+    head.script.push({ src: '//www.instagram.com/embed.js' })
 
 }
