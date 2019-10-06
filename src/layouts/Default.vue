@@ -7,6 +7,7 @@
 
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -28,6 +29,10 @@ export default {
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+
+}
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
@@ -35,6 +40,7 @@ body {
   line-height: 1.5;
   background: #141414;
   overflow-x: hidden;
+
 }
 
 .layout {

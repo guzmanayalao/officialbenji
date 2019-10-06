@@ -11,11 +11,9 @@
       </video>
         <g-image id="benjiLogo" src="../benjiLogo.svg"></g-image>
           <nav>
-            <a href="#">SHOWDATES</a>
-            <a href="#">MUSIC</a>
-            <a href="#">VIDEOS</a>
-            <a href="#">SOCIALS</a>
-            <a href="#">MERCH</a>
+            <a href="#dates">SHOWDATES</a>
+            <a href="#music">MUSIC</a>
+            <a href="#music">BOOKING/CONTACT</a>
           </nav>  
       
     </div>
@@ -31,13 +29,15 @@
             <div class="maxWidthWrapper">
               <h2>BENJI</h2>
               <p style="line-height: 1.8">
-                Benji excercises his imaginative and curious nature to expand the bounds of Chicago hiphop. After falling in love with poetry and rap, the 17 year old from Little Village Chicago decided to drop out of school
-                to focus on his passion. Since then, Benji has made a name for himself with his songs "Menace" and "Monster". Chicago wants more and Benji's ready to give them what they want.
-              </p>
-              <h2>SHOW DATES</h2>
-              <p><span class="showLocation">THE FORGE, JOLIET IL</span>
-                <span class="showDescription">DATE WILL BE ANNOUNCED SOON...</span>
-              </p>
+                Benji excercises his imaginative and curious mind to expand the bounds of Chicago hiphop. After falling in love with poetry and rap, the 17 year old from Little Village Chicago decided to drop out of school
+                to focus on his passion. Since then, Benji has made a name for himself with his songs "Menace" and "Monster". Chicago has been asking for more. Now free from a confining contract, Benji is ready to give his fans what they want.
+              <div id="datesWrapper">
+                <h2 id="dates">SHOW DATES</h2>
+                <p><span class="showLocation">THE FORGE, JOLIET IL</span>
+                  <span class="showDescription">DATE WILL BE ANNOUNCED SOON...</span>
+                </p>
+              </div>
+
             </div>
 
           </div>
@@ -49,7 +49,7 @@
         <div class="imageContentWrapper">
           <div class="content">
 
-            <div >
+            <div id="music">
               <div class="musicAndVideoWrapper">
                 <div style="position: relative; width: 100%">
                   <h2 style="text-align: center; display: block; margin-bottom: 2rem;">MUSIC</h2>
@@ -82,6 +82,35 @@
       </div>
 
     </section> -->
+        <section id="showDates">
+        <div class="imageContentWrapper">
+          <div class="content">
+            <div class="maxWidthWrapper">
+              <h2 style="font-size: 50px; display: block; text-align: center; ">CONTACT</h2>
+              <p style="line-height: 1.8">
+                For booking, features, and inquiries please fill out this form. This is the best way to directly contact BENJI. 
+              </p>
+              <form name="contact" method="POST" data-netlify="true">
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>   
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+    </section>
 
   
 
@@ -111,6 +140,52 @@ export default {
 </script>
 
 <style>
+form {
+  text-align: center;
+  
+}
+label {
+  display: flex;
+  flex-direction: column;
+}
+input, textarea {
+  padding: .5rem;
+  margin-top: .5rem;
+  background: transparent;
+  border-left: none;
+  border-top: none;
+  border-right: none; 
+  border-bottom: 1px solid white;
+  color: white; 
+  resize: none;
+    transition: all .3s;
+
+}
+input:focus, textarea:focus {
+  outline: none;
+
+  border-bottom: 1px solid #2900FF;
+    transition: all .3s;
+
+}
+button {
+  width: 200px;
+  font-size: 18px;
+  padding: .5rem 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  background: none;
+  color: #2900FF;
+  border: 1px solid #2900FF;
+  cursor: pointer;
+    transition: all .3s;
+
+}
+button:hover {
+  color: white;
+  background: #2900FF;
+  transition: all .3s;
+}
 .maxWidthWrapper {
   max-width: 1200px; 
   padding: .5rem;
@@ -179,6 +254,9 @@ nav > a {
   z-index: 1;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+}
+nav > a:last-of-type {
+  margin-right: 0;
 }
 nav > a:hover:after {
   content: "";
@@ -311,6 +389,10 @@ section#showDates .content {
   }
   .musicWrapper iframe:nth-of-type(2) {
     margin: 2rem auto;
+    
+  }
+  #datesWrapper {
+    margin-top: 4rem;
     
   }
   .showDescription, .showLocation {
