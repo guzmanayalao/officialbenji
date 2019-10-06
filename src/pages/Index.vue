@@ -96,7 +96,7 @@
           <div class="content">
             <div class="maxWidthWrapper">
               <h2 id="contact" style="font-size: 50px; display: block; text-align: center; ">CONTACT</h2>
-              <p style="line-height: 1.8">
+              <p style="line-height: 1.8; text-align: center">
                 For booking, features, and inquiries please fill out this form. This is the best way to directly contact BENJI.<br><span :style="{color: messageColor}">{{ successMessage }}</span>
               </p>
                 <form 
@@ -171,17 +171,23 @@ export default {
       .join('&')
     },
     handleSubmit(e) {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({
-          'form-name': e.target.getAttribute('name'),
-          ...this.formData,
-        }),
-      })
-      .then(() => this.successMessage = 'Thank you for contacting Benji!')
-      .catch( (error) => { this.successMessage = error;
-              this.messageColor = "#db4040" } )
+      if (this.formData.name && this.formData.email && this.formData.message){
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: this.encode({
+            'form-name': e.target.getAttribute('name'),
+            ...this.formData,
+          }),
+        })
+        .then(() => this.successMessage = 'Thank you for contacting Benji!')
+        .catch( (error) => { this.successMessage = error;
+                this.messageColor = "#db4040" } )
+      } else {
+        this.successMessage = 'Please fill out all of the form fields.';
+        this.messageColor = "#db4040"; 
+      }
+
     }
   },
   mounted () {
