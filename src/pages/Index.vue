@@ -82,7 +82,7 @@
       </div>
 
     </section> -->
-        <section id="showDates">
+        <section id="showDates" style="padding-bottom: 4rem;">
         <div class="imageContentWrapper">
           <div class="content">
             <div class="maxWidthWrapper">
