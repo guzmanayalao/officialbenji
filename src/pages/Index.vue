@@ -29,8 +29,11 @@
             <div class="maxWidthWrapper">
               <h2>BENJI</h2>
               <p style="line-height: 1.8">
-                Benji excercises his imaginative and curious mind to expand the bounds of Chicago hiphop. After falling in love with poetry and rap, the 17 year old from Little Village Chicago decided to drop out of school
-                to focus on his passion. Since then, Benji has made a name for himself with his songs "Menace" and "Monster". Chicago has been asking for more. Now free from a confining contract, Benji is ready to give his fans what they want.
+               Benji is an imaginative 17 year old artist from Little Village, Chicago. He's inspired by Gherbo's realness, Kid Cudi's cosmic themes, and Lil Peep's defiance. 
+               After dropping out of high school to pursue his dreams, Benji has played with Chicago's hip hop boundaries with songs like "Menace", "Monster", and "WarZone". 
+               Chicago has listened and it wants more.<br><a href="https://www.instagram.com/6enji6/">Instagram</a><a href="https://soundcloud.com/6enji6">Soundcloud</a>
+               <a href="https://open.spotify.com/artist/0YrGxDCwhTY1Zflh181ye4?si=3fjtZXDySliiPVOL3WA7YA">Spotify</a><a href="https://twitter.com/6enji6">Twitter</a>
+
               <div id="datesWrapper">
                 <h2 id="dates">SHOW DATES</h2>
                 <p><span class="showLocation">THE FORGE, JOLIET IL</span>
@@ -242,6 +245,21 @@ export default {
 #gallery::-webkit-scrollbar-corner {
   background: transparent;
 }
+.content a {
+  background: #1728ff;
+  color: white;
+  font-weight: 900;
+  text-decoration: none;
+  padding: .4rem;
+  text-transform: uppercase; 
+  margin-left: .4rem;
+  margin-top: 2rem;
+      display: inline-block;
+
+}
+.content a:first-of-type {
+  margin-left: 0;
+}
 form {
   text-align: center;
   
@@ -297,6 +315,8 @@ button:hover {
   
 }
 @media screen and (max-width: 1200px) {
+  .content a {
+  }
  .maxWidthWrapper {
   max-width: 600px; 
   padding: 1rem;
@@ -485,6 +505,11 @@ section#showDates .content {
   width: 200px;
 }
 @media screen and (max-width: 1200px) {
+  .content a {
+    font-size: .8rem; 
+    margin-right: 1rem;
+    margin-left: 0rem;
+  }
   input, textarea {
   width: 100%; 
   }
