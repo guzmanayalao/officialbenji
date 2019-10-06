@@ -90,7 +90,7 @@
               <p style="line-height: 1.8">
                 For booking, features, and inquiries please fill out this form. This is the best way to directly contact BENJI. 
               </p>
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" method="POST" data-netlify="true" action="/">
                 <p>
                   <label>Your Name: <input type="text" name="name" /></label>   
                 </p>
