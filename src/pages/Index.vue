@@ -168,8 +168,9 @@ export default {
           ...this.formData,
         }),
       })
-      .then(() => this.successMessage = 'Thank you for contacting benji!')
-      .catch(error => this.successMessage = error, this.messageColor = "#db4040" )
+      .then(() => this.successMessage = 'Thank you for contacting Benji!')
+      .catch( (error) => { this.successMessage = error;
+              this.messageColor = "#db4040" } )
     }
   },
   mounted () {
@@ -422,6 +423,9 @@ section#showDates .content {
   width: 200px;
 }
 @media screen and (max-width: 1200px) {
+  input, textarea {
+  width: 100%; 
+  }
   iframe {
     width: 320px;
   }
