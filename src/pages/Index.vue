@@ -9,7 +9,7 @@
       <video autoplay muted loop id="myVideo">
         <source src="../monster-bg.mp4" type="video/mp4">
       </video>
-        <g-image id="benjiLogo" src="../benjiLogo.svg"></g-image>
+        <g-image id="benjiLogo" src="../benjiNewLogo.svg"></g-image>
           <nav>
             <a href="#dates">SHOWDATES</a>
             <a href="#music">MUSIC</a>
