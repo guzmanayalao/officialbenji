@@ -43,7 +43,7 @@ export default function(Vue, { router, head, isClient }) {
   });
   head.meta.push({
     name: "og:image",
-    content: "./benjiwarzonecover.jpg"
+    content: "/assets/static/benjiwarzonecover.jpg"
   });
   head.meta.push({
     name: "twitter:card",
@@ -64,7 +64,7 @@ export default function(Vue, { router, head, isClient }) {
   });
   head.meta.push({
     name: "twitter:image",
-    content: "./benjiwarzonecover.jpg"
+    content: "/assets/static/benjiwarzonecover.jpg"
   });
   head.bodyAttrs = { class: "body-class" };
   head.script.push({ src: "//www.instagram.com/embed.js" });
