@@ -28,10 +28,8 @@
           <div class="content">
             <div class="maxWidthWrapper">
               <h2>BENJI</h2>
-              <p style="line-height: 1.8">
-               Benji is an imaginative 17 year old artist from Little Village, Chicago. He's inspired by Gherbo's realness, Kid Cudi's cosmic themes, and Lil Peep's defiance. 
-               After dropping out of high school to pursue his dreams, Benji has played with Chicago's hip hop boundaries with songs like "Menace", "Monster", and "WarZone". 
-               Chicago has listened and it wants more.<br><a href="https://www.instagram.com/6enji6/">Instagram</a><a href="https://soundcloud.com/6enji6">Soundcloud</a>
+                    <h2></h2>
+              <p style="line-height: 1.8">{{ $page.homepage.bio }}<br><a href="https://www.instagram.com/6enji6/">Instagram</a><a href="https://soundcloud.com/6enji6">Soundcloud</a>
                <a href="https://open.spotify.com/artist/0YrGxDCwhTY1Zflh181ye4?si=3fjtZXDySliiPVOL3WA7YA">Spotify</a><a href="https://twitter.com/6enji6">Twitter</a>
 
               <div id="datesWrapper">
@@ -147,7 +145,13 @@
 
   </Layout>
 </template>
-
+<page-query>
+query Homepage {
+  homepage(id: "1") {
+    bio
+  }
+}
+</page-query>
 <script>
 
 export default {

@@ -21,10 +21,22 @@ module.exports = {
   },
   plugins: [
     {
-      use: "@gridsome/source-filesystem gridsome-plugin-netlify-cms",
+      use: "@gridsome/source-filesystem",
       options: {
         path: "posts/**/*.md",
         typeName: "Post",
+        remark: {
+          plugins: [
+            // ...local plugins
+          ]
+        }
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "homepage/**/*.md",
+        typeName: "Homepage",
         remark: {
           plugins: [
             // ...local plugins
