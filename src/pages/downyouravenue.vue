@@ -19,18 +19,24 @@
         </div>
         <button class="">Listen</button>
       </a>
+      <a
+        class="link"
+        href="https://music.apple.com/us/album/down-your-avenue-feat-8matiklogan/1492592248?i=1492592249"
+        type="button"
+      >
+        <div>
+          <g-image src="../../static/uploads/apple-music-logo.png"></g-image>
+        </div>
+        <button class="">Listen</button>
+      </a>
+
       <a href="https://www.youtube.com/watch?v=AZn6yhp1zks" class="link">
         <div>
           <g-image src="../../static/uploads/youtube-brands.svg"></g-image>
         </div>
         <button class="">Listen</button></a
       >
-      <a class="link" type="button" disabled>
-        <div>
-          <g-image src="../../static/uploads/apple-music-logo.png"></g-image>
-        </div>
-        <button class="">Coming Soon</button>
-      </a>
+
       <a
         class="link"
         href="https://www.amazon.com/Down-Avenue-feat-8matiklogan-Explicit/dp/B082Z9MPKX/ref=sr_1_1?keywords=6enji&qid=1577035814&s=dmusic&sr=1-1"
