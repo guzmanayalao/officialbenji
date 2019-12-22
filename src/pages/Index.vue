@@ -346,7 +346,7 @@ button:hover {
   display: block;
   width: auto;
 }
-iframe {
+.musicWrapper iframe {
   margin: auto; 
   display: block;
   width: 550px;
@@ -517,7 +517,7 @@ section#showDates .content {
   input, textarea {
   width: 100%; 
   }
-  iframe {
+  .musicWrapper iframe {
     width: 320px;
   }
   .musicWrapper {
