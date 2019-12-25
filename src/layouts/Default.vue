@@ -1,10 +1,25 @@
 <template>
   <div>
-    <div @click="openModal = true, modalVideoSrc='https://www.youtube.com/embed/RhKZ2EpaeA0?controls=0&autoplay=1'" id="notice">"MONSTER" OUT NOW ON ALL PLATFORMS. CLICK TO WATCH NOW.</div>
-    <div id="videoModal" :class="{modalIsOpen: openModal}" @click="openModal = false, modalVideoSrc = ''"> 
-      <iframe width="560" height="315" :src="modalVideoSrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
-    <slot/> 
+    <a href="/downyouravenue" id="notice"
+      >"DOWN YOUR AVENUE" OUT NOW ON ALL PLATFORMS. CLICK TO LISTEN NOW.</a
+    >
 
+    <!-- <div @click="openModal = true, modalVideoSrc='https://www.youtube.com/embed/RhKZ2EpaeA0?controls=0&autoplay=1'" id="notice">"DOWN YOUR AVENUE" OUT NOW ON ALL PLATFORMS. CLICK TO LISTEN NOW.</div> -->
+    <div
+      id="videoModal"
+      :class="{ modalIsOpen: openModal }"
+      @click="(openModal = false), (modalVideoSrc = '')"
+    >
+      <iframe
+        width="560"
+        height="315"
+        :src="modalVideoSrc"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <slot />
   </div>
 </template>
 
@@ -13,17 +28,13 @@ export default {
   data() {
     return {
       openModal: false,
-      modalVideoSrc: 'https://www.youtube.com/embed/RhKZ2EpaeA0?controls=0'
-
-    }
+      modalVideoSrc: "https://www.youtube.com/embed/RhKZ2EpaeA0?controls=0"
+    };
   },
-  methods: { 
-  },
-  created () {
-  }
-}
+  methods: {},
+  created() {}
+};
 </script>
-
 
 <style>
 * {
@@ -31,16 +42,15 @@ export default {
 }
 html {
   scroll-behavior: smooth;
-
 }
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
   background: #141414;
   overflow-x: hidden;
-
 }
 
 .layout {
@@ -62,17 +72,17 @@ body {
   margin-left: 20px;
 }
 
-div#notice {
-  background: #2900FF;
+a#notice {
+  background: #ff0055;
   color: white;
-  text-align: center; 
+  text-align: center;
   font-weight: 900;
   padding: 20px 0px;
   position: absolute;
   left: 0;
   right: 0;
   z-index: 3;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 #videoModal {
   display: flex;
@@ -83,15 +93,13 @@ div#notice {
   bottom: 0;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 4;
-  transform: scale(0); 
-  transition: all .3s;
+  transform: scale(0);
+  transition: all 0.3s;
 }
 .modalIsOpen {
-    transform: scale(1) !important;
-      transition: all .3s;
- 
-
+  transform: scale(1) !important;
+  transition: all 0.3s;
 }
 </style>

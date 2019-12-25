@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: "Benji",
+
   transformers: {
     remark: {
       externalLinksTarget: "_blank",
@@ -37,6 +38,18 @@ module.exports = {
       options: {
         path: "homepage/**/*.md",
         typeName: "Homepage",
+        remark: {
+          plugins: [
+            // ...local plugins
+          ]
+        }
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "listenpages/**/*.md",
+        typeName: "listenpages",
         remark: {
           plugins: [
             // ...local plugins

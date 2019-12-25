@@ -9,7 +9,7 @@
       <video autoplay muted loop id="myVideo">
         <source src="../monster-bg.mp4" type="video/mp4">
       </video>
-        <g-image id="benjiLogo" src="../benjiNewLogo.svg"></g-image>
+        <g-image id="benjiLogo" src="../../static/uploads/LOGO@2x.png"></g-image>
           <nav>
             <a href="#dates">SHOWDATES</a>
             <a href="#music">MUSIC</a>
@@ -55,8 +55,11 @@
                 <div style="position: relative; width: 100%">
                   <h2 style="text-align: center; display: block; margin-bottom: 2rem;">MUSIC</h2>
                   <div class="musicWrapper">
-                    <iframe  src="https://www.youtube.com/embed/RhKZ2EpaeA0?controls=0&autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    <iframe  src="https://www.youtube.com/embed/xJYIE5UkTjo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe  width="auto" height="auto" src="https://www.youtube.com/embed/YgneKG9uDjw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/RhKZ2EpaeA0?controls=0&autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                     <iframe  scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/294175084&color=%23690000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <iframe src="https://open.spotify.com/embed/track/6BiQdxzLJz5P7eetChY6Hx" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                   </div>
                 </div>
               </div>
@@ -335,9 +338,13 @@ button:hover {
 }
 .musicWrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.musicWrapper iframe:nth-of-type(2) {
-  margin-left: 2rem;
+.musicWrapper iframe {
+  margin-bottom: 2rem;
+  margin-right: 2rem;
 }
 .musicAndVideoWrapper h2 {
   margin-top: 0;
@@ -523,8 +530,8 @@ section#showDates .content {
   .musicWrapper {
     flex-direction: column;
   }
-  .musicWrapper iframe:nth-of-type(2) {
-    margin: 2rem auto;
+  .musicWrapper iframe{
+    margin-right: 0;
     
   }
   #datesWrapper {
